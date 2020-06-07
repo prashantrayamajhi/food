@@ -114,10 +114,12 @@ form input{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
     margin-bottom: 50px;
 }
 .meal > div img{
-   
     height: 90%;
     width: 100%;
     border: 2px solid grey;
