@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; 
+}
+body{
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('images/background.jpg');
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container{
+    position: relative;
+    text-align: center;
+    padding: 50px;
+}
+.container h1{
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+}
+form input{
+    font-size: 18px;
+    padding: 3px 4px;
+    width: 300px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(51, 50, 50);
+}
+.result-heading{
+    position: relative;
+    text-align: center;
+}
+.result-heading h2{
+    font-size: 27px;
+    letter-spacing: 2px;
+}
+.no-result-found{
+    text-align: center;
+    color: rgb(245, 91, 91);
+    word-spacing: 2px;
+    position: relative;
+        
+}
+.results-found{
+    color: blanchedalmond;
+    position: relative;
+}
+#search{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+}
+#search i{
+    font-size: 20px;
+    padding: 6px;   
+}
+#random{
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none
+}
+#random i{
+    font-size: 20px;
+    padding: 6px;
+}
+.meal{
+    display: none;
+    position: absolute;
+    background-color: rgb(186, 201, 101);
+    max-width: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 50px;
+    visibility: hidden;
+    padding-bottom: 100px;
+    margin-top: 10px;    
+    margin-bottom: 50px;
+}
+
+.meal.show{
+    visibility: visible;
+    position: relative;
+}
+.meal > div{
+    color: black;
+    height: 180px;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-bottom: 50px;
+}
+.meal > div img{
+   
+    height: 90%;
+    width: 100%;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+.meal p{
+    font-size: 15px;
+    padding: 2px;
+    margin-bottom: 8px;
+    padding: 5px;
+    cursor: pointer;   
+}
+
+.single-meal{
+    max-width: 800px;
+    background-color: rgb(241, 241, 64);
+    padding: 30px;
+    text-align: center;
+    display: none;
+    position: relative;
+
+}
+.single-meal h2{
+    color: rgb(16, 88, 105);
+    width: 50%;
+    margin: auto;
+    padding-bottom: 3px;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+   
+}
+.single-meal p{
+    line-height: 2rem;
+    text-align: left;
+}
+.single-meal.show{
+    display: block;
+}
+.source-div{
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgb(186, 201, 101);
+    padding: 30px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 150px;
+    visibility: hidden;
+
+}
+.source-div h2{
+    color: purple;
+    margin-bottom: 65px;
+    border-bottom: 2px solid rgb(109, 91, 91);
+    
+}
+.source-div h3{
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: rgb(238, 78, 78);
+}
+.source-div span{
+    color: black;
+    font-size: 18px;
+    
+}
+.source-div span a{
+    color: black;
+    text-decoration: underline;
+}
+.source-div.show{
+    visibility: visible;
+    position: relative;
+    margin-top: 20px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    margin:10px 0;
+    color: blanchedalmond;
+    background-color: black;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: -5px;
+
+}
+@media(max-width:800px){
+    .results-found{
+        font-size: 18px;
+        letter-spacing: normal;
+        text-align: center;
+    }
+    .no-result-found{
+        font-size: 18px;
+    }
+    .single-meal img{
+        width: 280px;
+    }
+
+}
+@media(max-width:500px){
+    .meal{
+        grid-template-columns: 1fr;
+        padding-bottom: 50px;
+    }
+    .meal-info{
+        margin: auto;
+        margin: 30px 0;
+        width: 250px;
+        height: 250px;
+        margin-top: -50px;
+    }
+    .container h1{
+        font-size: 25px;
+    }
+    form input{
+        width: 70%;
+        font-size: 16px;
+    }
+    #search i{
+        font-size: 18px;
+        padding: 6px;   
+        outline: none;
+    }
+    #random i{
+        font-size: 18px;
+        padding: 6px;   
+        outline: none;
+    }
+    .result-heading h2 {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    .single-meal h2{
+        font-size: 18px;
+    }
+    .source-div h3{
+        font-size: 18px;
+        width: 100%;
+    }
+  
+} 
